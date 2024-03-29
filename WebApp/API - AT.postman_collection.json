@@ -1,0 +1,490 @@
+{
+	"info": {
+		"_postman_id": "b75309a5-c4bd-4c27-9a2f-1fe630567a7d",
+		"name": "API - AT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33482360"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente/obterLista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"obterLista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente/3/obterLista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"3",
+								"obterLista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cliente/3/excluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"3",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cliente/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cliente",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bebidas",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bebidas/obterLista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bebidas",
+								"obterLista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bebidas/1/obterLista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bebidas",
+								"1",
+								"obterLista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bebidas/1/excluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bebidas",
+								"1",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipo\": \"Refrigerante\",\r\n    \"alcolico\": false,\r\n    \"precoCompra\": 2.5,\r\n    \"precoVenda\": 7.5,\r\n    \"id\": 1,\r\n    \"nome\": \"Refrigerante de Cola\",\r\n    \"validade\": \"2024-12-31\",\r\n    \"preco\": 7.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bebidas/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bebidas",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedidos/obterLista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedidos",
+								"obterLista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedidos/1/obterLista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedidos",
+								"1",
+								"obterLista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedidos/1/excluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedidos",
+								"1",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 11,\r\n    \"itens\": {\r\n        \"1\": {\r\n            \"tipo\": \"Refrigerante\",\r\n            \"alcolico\": false,\r\n            \"precoCompra\": 2.5,\r\n            \"precoVenda\": 7.5,\r\n            \"id\": 1,\r\n            \"nome\": \"Refrigerante de Cola\",\r\n            \"validade\": \"2024-12-31\",\r\n            \"preco\": 7.5\r\n        },\r\n        \"2\": {\r\n            \"tipo\": \"Suco\",\r\n            \"alcolico\": false,\r\n            \"precoCompra\": 3.0,\r\n            \"precoVenda\": 9.0,\r\n            \"id\": 2,\r\n            \"nome\": \"Suco de Laranja\",\r\n            \"validade\": \"2024-11-30\",\r\n            \"preco\": 9.0\r\n        },\r\n        \"3\": {\r\n            \"tipo\": \"Salgado\",\r\n            \"precoCompra\": 3.5,\r\n            \"precoVenda\": 10.5,\r\n            \"id\": 1,\r\n            \"nome\": \"Salgado de Frango\",\r\n            \"validade\": \"2024-12-31\",\r\n            \"preco\": 10.5\r\n        },\r\n        \"4\": {\r\n            \"tipo\": \"Salgado\",\r\n            \"precoCompra\": 4.0,\r\n            \"precoVenda\": 12.0,\r\n            \"id\": 2,\r\n            \"nome\": \"Coxinha\",\r\n            \"validade\": \"2024-11-30\",\r\n            \"preco\": 12.0\r\n        }\r\n    },\r\n    \"cliente\": {\r\n        \"id\": 1,\r\n        \"nome\": \"João Silva\",\r\n        \"endereco\": {\r\n            \"cep\": \"12345-678\",\r\n            \"logradouro\": \"Rua das Flores\",\r\n            \"bairro\": \"Centro\",\r\n            \"localidade\": \"Cidade A\",\r\n            \"uf\": \"Estado A\"\r\n        },\r\n        \"telefone\": \"111111111\"\r\n    },\r\n    \"valorTotal\": 39.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedidos/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedidos",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comidas",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comestiveis/obterLista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comestiveis",
+								"obterLista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comestiveis/2/obterLista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comestiveis",
+								"2",
+								"obterLista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/comestiveis/2/excluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comestiveis",
+								"2",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipo\": \"Salgado\",\r\n    \"precoCompra\": 4.0,\r\n    \"precoVenda\": 12.0,\r\n    \"id\": 2,\r\n    \"nome\": \"Coxinha\",\r\n    \"validade\": \"2024-11-30\",\r\n    \"preco\": 12.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/comestiveis/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"comestiveis",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endereco",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/enderecos/obterLista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"enderecos",
+								"obterLista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarPorCEP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/enderecos/12345-678/obterLista",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"enderecos",
+								"12345-678",
+								"obterLista"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/enderecos/12345-678/excluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"enderecos",
+								"12345-678",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cep\": \"12345-678\",\r\n    \"logradouro\": \"Rua das Flores\",\r\n    \"bairro\": \"Centro\",\r\n    \"localidade\": \"Cidade A\",\r\n    \"uf\": \"Estado A\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/enderecos/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"enderecos",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

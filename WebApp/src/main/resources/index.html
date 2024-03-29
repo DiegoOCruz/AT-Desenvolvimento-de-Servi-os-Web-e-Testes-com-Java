@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>WebApp</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Última versão CSS compilada e minificada -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+
+<!-- Tema opcional -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	crossorigin="anonymous">
+
+<!-- Última versão JavaScript compilada e minificada -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Loja</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="/cliente/obterListaHtml">Clientes</a></li>
+				<li><a href="/enderecos/obterListaHtml">Endereços</a></li>
+				<li><a href="/comestiveis/obterListaHtml">Comidas</a></li>
+				<li><a href="/bebidas/obterListaHtml">Bebidas</a></li>
+				<li><a href="/pedidos/obterListaHtml">Pedidos</a></li>
+				<li><a href="/"></a></li>
+				<li><a href="/api">Documentação API</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container-fluid flex border p-3 my-3">
+		<img
+			src="https://www.infnet.edu.br/infnet/wp-content/uploads/sites/6/2022/03/infnet_versao-principal-01-scaled.jpg"
+			class="img-responsive rounded mx-auto" style="max-width: 50%;" />
+	</div>
+	<div class="container mt-5">
+		<h1 class="mb-4">Relatório de Desenvolvimento da Aplicação Web</h1>
+
+		<h2>Introdução</h2>
+		<p>O presente relatório destina-se a fornecer uma visão geral do
+			desenvolvimento da aplicação web, destacando os principais aspectos
+			técnicos, funcionalidades implementadas e desafios enfrentados
+			durante o processo.</p>
+
+		<h2>Objetivo</h2>
+		<p>O objetivo principal do projeto foi criar uma aplicação web
+			robusta e funcional que permita aos usuários realizar operações
+			relacionadas a clientes, produtos, pedidos e endereços de forma
+			eficiente e intuitiva.</p>
+
+		<h2>Tecnologias Utilizadas</h2>
+		<ul>
+			<li>Java: Linguagem de programação principal para o
+				desenvolvimento da aplicação.</li>
+			<li>Spark Framework: Utilizado para o desenvolvimento de APIs
+				RESTful.</li>
+			<li>Gson: Biblioteca para serialização e desserialização de
+				objetos Java em JSON.</li>
+			<li>HTML/CSS: Utilizados para a criação das interfaces de
+				usuário.</li>
+			<li>Git: Utilizado para controle de versão do código fonte.</li>
+			<li>GitHub: Repositório remoto para hospedagem do código fonte.</li>
+			<li>Maven: Utilizado para gerenciamento de dependências e
+				construção do projeto.</li>
+		</ul>
+
+		<h2>Funcionalidades Implementadas</h2>
+		<ul>
+			<li>Clientes
+				<ul>
+					<li>Cadastro, exclusão e consulta de clientes.</li>
+					<li>Associação de endereços aos clientes.</li>
+				</ul>
+			</li>
+			<li>Produtos (Bebidas e Comestíveis)
+				<ul>
+					<li>Cadastro, exclusão e consulta de bebidas e comestíveis.</li>
+					<li>Diferenciação entre tipos de bebidas (alcoólicas e não
+						alcoólicas).</li>
+					<li>Cálculo automático do preço de venda dos produtos.</li>
+				</ul>
+			</li>
+			<li>Pedidos
+				<ul>
+					<li>Cadastro, exclusão e consulta de pedidos.</li>
+					<li>Adição e remoção de produtos aos pedidos.</li>
+					<li>Cálculo automático do valor total do pedido.</li>
+				</ul>
+			</li>
+			<li>Endereços
+				<ul>
+					<li>Cadastro, exclusão e consulta de endereços.</li>
+					<li>Consulta de endereço por CEP utilizando serviço externo.</li>
+				</ul>
+			</li>
+		</ul>
+
+		<h2>Desafios Enfrentados</h2>
+		<ul>
+			<li>Integração com serviço externo de consulta de endereços por
+				CEP.</li>
+			<li>Implementação de lógica para cálculo do preço de venda dos
+				produtos.</li>
+			<li>Garantia da consistência e integridade dos dados ao associar
+				clientes e endereços.</li>
+		</ul>
+
+		<h2>Funcionamento da Aplicação</h2>
+		<p>A aplicação foi desenvolvida utilizando Java em conjunto com o
+			Spark Framework, uma biblioteca Java para criação de aplicativos web.
+			Ela permite o gerenciamento eficiente de clientes, produtos e pedidos
+			em uma loja online. Aqui está um resumo do seu funcionamento:</p>
+		<ul>
+			<li>Gerenciamento de Clientes:
+				<ul>
+					<li>Cadastro</li>
+					<li>Consulta</li>
+					<li>Exclusão</li>
+				</ul>
+			</li>
+			<li>Gerenciamento de Produtos:
+				<ul>
+					<li>Cadastro</li>
+					<li>Consulta</li>
+					<li>Exclusão</li>
+				</ul>
+			</li>
+			<li>Gerenciamento de Pedidos:
+				<ul>
+					<li>Criação</li>
+					<li>Cálculo Automático</li>
+					<li>Consulta</li>
+				</ul>
+			</li>
+		</ul>
+
+		<h2>Integração com API Externa</h2>
+		<p>A aplicação faz uso de uma API externa para melhorar sua
+			funcionalidade e oferecer recursos adicionais aos usuários.</p>
+		<ul>
+			<li>API de Consulta de Endereço por CEP - https://viacep.com.br/</li>
+		</ul>
+
+	</div>
+	<hr>
+	<div class="container m-5">
+
+		<p class="m-5">
+			Aluno: Diego Oliveira da Cruz<br> Curso: Engenharia de Software<br>
+			Instituição: Instituto Infinet<br> Professor: Elbeth Lins Costa
+			de Moraes<br> Link do GitHub: <a
+				href="https://github.com/DiegoOCruz/AT-Desenvolvimento-de-Servi-os-Web-e-Testes-com-Java.git">Repositório
+				do Projeto</a>
+		</p>
+	</div class="m-5">
+	<footer class="footer mt-auto py-3 bg-dark">
+		<div class="container text-center">
+			<span class="text-white">&copy; 2024 Diego Oliveira da Cruz.
+				Todos os direitos reservados.</span>
+		</div>
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>WebApp</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">Loja</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="/cliente/obterListaHtml">Clientes</a></li>
+				<li><a href="/enderecos/obterListaHtml">Endereços</a></li>
+				<li><a href="/comestiveis/obterListaHtml">Comidas</a></li>
+				<li><a href="/bebidas/obterListaHtml">Bebidas</a></li>
+				<li><a href="/pedidos/obterListaHtml">Pedidos</a></li>
+				<li><a href="#"></a></li>
+				<li><a href="/api">Documentação API</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container-fluid flex border p-3 my-3">
+		<img
+			src="https://www.infnet.edu.br/infnet/wp-content/uploads/sites/6/2022/03/infnet_versao-principal-01-scaled.jpg"
+			class="img-responsive rounded mx-auto" style="max-width: 50%;" />
+	</div>
+
+	<div class="container">
+		<h1 class="mt-5">Introdução</h1>
+		<p>Bem-vindo à documentação da API AT (Alimentos e Bebidas), uma
+			API para gerenciamento de pedidos, clientes, bebidas, comidas e
+			endereços. Esta API fornece endpoints para listar, adicionar,
+			atualizar e excluir informações relacionadas a clientes, pedidos,
+			bebidas, comidas e endereços.</p>
+
+		<h2 class="mt-5">Visão Geral</h2>
+		<p>A API AT possui os seguintes recursos principais:</p>
+		<ul>
+			<li>Cliente: Gerenciamento de informações de clientes.</li>
+			<li>Bebidas: Gerenciamento de bebidas disponíveis para pedido.</li>
+			<li>Pedidos: Gerenciamento de pedidos de clientes.</li>
+			<li>Comidas: Gerenciamento de comidas disponíveis para pedido.</li>
+			<li>Endereço: Gerenciamento de informações de endereços.</li>
+		</ul>
+
+		<h2 class="mt-5">Recursos</h2>
+
+		<h3>Cliente</h3>
+		<p>
+			<strong>Listar Clientes</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> GET /cliente/obterLista
+		</p>
+		<p>
+			<strong>Descrição:</strong> Retorna a lista de todos os clientes
+			cadastrados.
+		</p>
+
+		<p>
+			<strong>Listar Cliente por ID</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> GET /cliente/{id}/obterLista
+		</p>
+		<p>
+			<strong>Descrição:</strong> Retorna as informações de um cliente
+			específico com base no ID fornecido.
+		</p>
+
+		<p>
+			<strong>Excluir Cliente</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> DELETE /cliente/{id}/excluir
+		</p>
+		<p>
+			<strong>Descrição:</strong> Exclui um cliente específico com base no
+			ID fornecido.
+		</p>
+
+		<p>
+			<strong>Incluir Cliente</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> POST /cliente/incluir
+		</p>
+		<p>
+			<strong>Descrição:</strong> Adiciona um novo cliente com as
+			informações fornecidas no corpo da solicitação.
+		</p>
+
+		<h3 class="mt-4">Bebidas</h3>
+		<p>
+			<strong>Listar Bebidas</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> GET /bebidas/obterLista
+		</p>
+		<p>
+			<strong>Descrição:</strong> Retorna a lista de todas as bebidas
+			disponíveis para pedido.
+		</p>
+
+		<p>
+			<strong>Listar Bebida por ID</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> GET /bebidas/{id}/obterLista
+		</p>
+		<p>
+			<strong>Descrição:</strong> Retorna as informações de uma bebida
+			específica com base no ID fornecido.
+		</p>
+
+		<p>
+			<strong>Excluir Bebida</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> DELETE /bebidas/{id}/excluir
+		</p>
+		<p>
+			<strong>Descrição:</strong> Exclui uma bebida específica com base no
+			ID fornecido.
+		</p>
+
+		<p>
+			<strong>Incluir Bebida</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> POST /bebidas/incluir
+		</p>
+		<p>
+			<strong>Descrição:</strong> Adiciona uma nova bebida com as
+			informações fornecidas no corpo da solicitação.
+		</p>
+
+		<h3 class="mt-4">Pedidos</h3>
+		<p>
+			<strong>Listar Pedidos</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> GET /pedidos/obterLista
+		</p>
+		<p>
+			<strong>Descrição:</strong> Retorna a lista de todos os pedidos
+			realizados.
+		</p>
+
+		<p>
+			<strong>Listar Pedido por ID</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> GET /pedidos/{id}/obterLista
+		</p>
+		<p>
+			<strong>Descrição:</strong> Retorna as informações de um pedido
+			específico com base no ID fornecido.
+		</p>
+
+		<p>
+			<strong>Excluir Pedido</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> DELETE /pedidos/{id}/excluir
+		</p>
+		<p>
+			<strong>Descrição:</strong> Exclui um pedido específico com base no
+			ID fornecido.
+		</p>
+
+		<p>
+			<strong>Incluir Pedido</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> POST /pedidos/incluir
+		</p>
+		<p>
+			<strong>Descrição:</strong> Adiciona um novo pedido com as
+			informações fornecidas no corpo da solicitação.
+		</p>
+
+		<h3 class="mt-4">Comidas</h3>
+		<p>
+			<strong>Listar Comidas</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> GET /comestiveis/obterLista
+		</p>
+		<p>
+			<strong>Descrição:</strong> Retorna a lista de todas as comidas
+			disponíveis para pedido.
+		</p>
+
+		<p>
+			<strong>Listar Comida por ID</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> GET /comestiveis/{id}/obterLista
+		</p>
+		<p>
+			<strong>Descrição:</strong> Retorna as informações de uma comida
+			específica com base no ID fornecido.
+		</p>
+
+		<p>
+			<strong>Excluir Comida</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> DELETE /comestiveis/{id}/excluir
+		</p>
+		<p>
+			<strong>Descrição:</strong> Exclui uma comida específica com base no
+			ID fornecido.
+		</p>
+
+		<p>
+			<strong>Incluir Comida</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> POST /comestiveis/incluir
+		</p>
+		<p>
+			<strong>Descrição:</strong> Adiciona uma nova comida com as
+			informações fornecidas no corpo da solicitação.
+		</p>
+
+		<h3 class="mt-4">Endereço</h3>
+		<p>
+			<strong>Listar Endereços</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> GET /enderecos/obterLista
+		</p>
+		<p>
+			<strong>Descrição:</strong> Retorna a lista de todos os endereços
+			cadastrados.
+		</p>
+
+		<p>
+			<strong>Listar Endereço por CEP</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> GET /enderecos/{cep}/obterLista
+		</p>
+		<p>
+			<strong>Descrição:</strong> Retorna as informações de um endereço
+			específico com base no CEP fornecido.
+		</p>
+
+		<p>
+			<strong>Excluir Endereço</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> DELETE /enderecos/{cep}/excluir
+		</p>
+		<p>
+			<strong>Descrição:</strong> Exclui um endereço específico com base no
+			CEP fornecido.
+		</p>
+
+		<p>
+			<strong>Incluir Endereço</strong>
+		</p>
+		<p>
+			<strong>Endpoint:</strong> POST /enderecos/incluir
+		</p>
+		<p>
+			<strong>Descrição:</strong> Adiciona um novo endereço com as
+			informações fornecidas no corpo da solicitação.
+		</p>
+	</div>
+	<footer class="footer mt-auto py-3 bg-dark">
+		<div class="container text-center">
+			<span class="text-white">&copy; 2024 Diego Oliveira da Cruz.
+				Todos os direitos reservados.</span>
+		</div>
+
+	</footer>
+</body>
+
+</html>
