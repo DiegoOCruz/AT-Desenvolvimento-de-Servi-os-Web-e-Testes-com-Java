@@ -5,9 +5,7 @@ import WebApp.service.BebidaService;
 
 public class BebidaLoader {
 	public static void loalBebidas() {
-		BebidaService bebidaService = new BebidaService();
-		// public Bebida(int id, String nome, String validade, String tipo, Boolean
-		// alcolico, Float precoCompra)
+
 		Bebida bebida1 = new Bebida(1, "Refrigerante de Cola", "2024-12-31", "Refrigerante", false, 2.50f);
 		Bebida bebida2 = new Bebida(2, "Suco de Laranja", "2024-11-30", "Suco", false, 3.00f);
 		Bebida bebida3 = new Bebida(3, "Cerveja Pilsen", "2024-10-31", "Cerveja", true, 2.75f);
@@ -19,16 +17,16 @@ public class BebidaLoader {
 		Bebida bebida9 = new Bebida(9, "Cachaça Artesanal", "2025-03-31", "Cachaça", true, 8.50f);
 		Bebida bebida10 = new Bebida(10, "Gin", "2024-11-30", "Destilado", true, 12.00f);
 
-		bebidaService.incluir(bebida1);
-		bebidaService.incluir(bebida2);
-		bebidaService.incluir(bebida3);
-		bebidaService.incluir(bebida4);
-		bebidaService.incluir(bebida5);
-		bebidaService.incluir(bebida6);
-		bebidaService.incluir(bebida7);
-		bebidaService.incluir(bebida8);
-		bebidaService.incluir(bebida9);
-		bebidaService.incluir(bebida10);
+		BebidaService.incluir(bebida1);
+		BebidaService.incluir(bebida2);
+		BebidaService.incluir(bebida3);
+		BebidaService.incluir(bebida4);
+		BebidaService.incluir(bebida5);
+		BebidaService.incluir(bebida6);
+		BebidaService.incluir(bebida7);
+		BebidaService.incluir(bebida8);
+		BebidaService.incluir(bebida9);
+		BebidaService.incluir(bebida10);
 
 //		System.out.println(bebidaService.obterLista());
 //		System.out.println(bebidaService.obter(7));

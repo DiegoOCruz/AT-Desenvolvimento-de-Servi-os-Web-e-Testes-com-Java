@@ -25,6 +25,8 @@ public class EndpointsLoader {
 		delete("/cliente/:id/excluir", ClienteController.excluir);
 		get("/cliente/:id/obterLista", ClienteController.obterPorId);
 		get("/cliente/obterListaHtml", ClienteController.obterListaHtml);
+		//--
+		post("/cliente/incluir/:cep", ClienteController.incluirComCep);
 		
 		//Bebida
 		get("/bebidas/obterLista", BebidaController.obterLista);

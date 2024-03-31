@@ -9,7 +9,7 @@ import WebApp.model.domain.Endereco;
 public class EnderecoService {
 	private static Map<String, Endereco> enderecos = new HashMap<String, Endereco>(); 
 	
-	public void incluir(Endereco endereco) {
+	public static void incluir(Endereco endereco) {
 		enderecos.put(endereco.getCep(), endereco);
 	}
 	
@@ -21,7 +21,7 @@ public class EnderecoService {
 		return enderecos.values();
 	}
 	
-	public  Endereco obter(String cep){
+	public static Endereco obter(String cep){
 		return enderecos.get(cep);
 	}
 }

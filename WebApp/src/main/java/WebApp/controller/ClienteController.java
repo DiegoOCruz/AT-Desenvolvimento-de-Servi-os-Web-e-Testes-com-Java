@@ -1,13 +1,20 @@
 package WebApp.controller;
+import WebApp.client.EnderecoClient;
+
+import static spark.Spark.post;	
 
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
-import WebApp.model.domain.Cliente;	
+import WebApp.model.domain.Cliente;
+import WebApp.model.domain.Endereco;
 import WebApp.service.ClienteService;
 import spark.Route;
 
 public class ClienteController{
 	static ClienteService clienteService = new ClienteService();
+	
 	//recuperar cliente
 		public static Route obterLista = (req, resp) -> {
 			String gson = new Gson().toJson(clienteService.obterLista());
@@ -55,6 +62,33 @@ public class ClienteController{
 		    sb.append("<ul><li><a href=\"/\">Voltar</a></li></ul>");
 		    return sb.toString();
 		};
+		
+		//incluir cliente com cep
+		
+		public static Route incluirComCep = (req, resp) -> {
+		    Cliente parametro = new Gson().fromJson(req.body(), Cliente.class);
+		    String cep = req.params("cep");
+		    
+		    // Obter o JSON do endereço a partir do serviço remoto
+		    String enderecoJson = EnderecoClient.obterEnderecoPorCep(cep);
+		    
+		    // Converter o JSON em um objeto Endereco
+		    JsonObject enderecoObj = JsonParser.parseString(enderecoJson).getAsJsonObject();
+		    Endereco endereco = new Endereco();
+		    endereco.setCep(enderecoObj.get("cep").getAsString());
+		    endereco.setLogradouro(enderecoObj.get("logradouro").getAsString());
+		    endereco.setBairro(enderecoObj.get("bairro").getAsString());
+		    endereco.setLocalidade(enderecoObj.get("localidade").getAsString());
+		    endereco.setUf(enderecoObj.get("uf").getAsString());
+
+		    // Configurar o endereço no cliente e incluir no serviço
+		    parametro.setEndereco(endereco);
+		    clienteService.incluir(parametro);
+
+		    return parametro.getNome() + " incluído com sucesso.";
+		};
+		
+
 
 }
 

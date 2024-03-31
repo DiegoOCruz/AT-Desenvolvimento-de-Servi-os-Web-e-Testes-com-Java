@@ -5,7 +5,6 @@ import WebApp.service.ComestivelService;
 
 public class ComestiveisLoader {
 	public static void loadComestiveis() {
-		ComestivelService comestivelService = new ComestivelService();
 		
         // Instanciando 10 comestíveis diferentes
         Comestivel c1 = new Comestivel(1, "Salgado de Frango", "2024-12-31", "Salgado", 3.50f);
@@ -20,16 +19,16 @@ public class ComestiveisLoader {
         Comestivel c10 = new Comestivel(10, "Muffin de Blueberry", "2024-11-30", "Doce", 3.00f);
 
         // Adicionando os comestíveis ao serviço
-        comestivelService.incluir(c1);
-        comestivelService.incluir(c2);
-        comestivelService.incluir(c3);
-        comestivelService.incluir(c4);
-        comestivelService.incluir(c5);
-        comestivelService.incluir(c6);
-        comestivelService.incluir(c7);
-        comestivelService.incluir(c8);
-        comestivelService.incluir(c9);
-        comestivelService.incluir(c10);
+        ComestivelService.incluir(c1);
+        ComestivelService.incluir(c2);
+        ComestivelService.incluir(c3);
+        ComestivelService.incluir(c4);
+        ComestivelService.incluir(c5);
+        ComestivelService.incluir(c6);
+        ComestivelService.incluir(c7);
+        ComestivelService.incluir(c8);
+        ComestivelService.incluir(c9);
+        ComestivelService.incluir(c10);
 
 
 //		System.out.println(comestivelService.obterLista());

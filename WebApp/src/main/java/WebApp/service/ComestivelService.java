@@ -11,7 +11,7 @@ import WebApp.model.domain.Comestivel;
 public class ComestivelService {
 	private static Map<Integer, Comestivel> comestiveis = new HashMap<Integer, Comestivel>(); 
 	
-	public void incluir(Comestivel comestivel) {
+	public static void incluir(Comestivel comestivel) {
 		comestiveis.put(comestivel.getId(), comestivel);
 	}
 	
@@ -23,7 +23,7 @@ public class ComestivelService {
 		return comestiveis.values();
 	}
 	
-	public Comestivel obter(Integer id){
+	public static Comestivel obter(Integer id){
 		return comestiveis.get(id);
 	}
 }

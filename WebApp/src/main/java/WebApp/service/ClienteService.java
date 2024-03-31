@@ -11,7 +11,7 @@ import WebApp.model.domain.Cliente;
 public class ClienteService {
 	
 	private static Map<Integer, Cliente> clientes = new HashMap<Integer, Cliente>(); 
-	public void incluir(Cliente cliente) {
+	public static void incluir(Cliente cliente) {
 		clientes.put(cliente.getId(), cliente);
 	}
 	
@@ -23,7 +23,7 @@ public class ClienteService {
 		return clientes.values();
 	}
 	
-	public Cliente obter(Integer id){
+	public static Cliente obter(Integer id){
 		return clientes.get(id);
 	}
 }

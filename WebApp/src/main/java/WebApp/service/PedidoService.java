@@ -11,7 +11,7 @@ import WebApp.model.domain.Pedido;
 public class PedidoService {
 	private static Map<Integer, Pedido> pedidos = new HashMap<Integer, Pedido>(); 
 	
-	public void incluir(Pedido pedido) {
+	public static void incluir(Pedido pedido) {
 		pedidos.put(pedido.getId(), pedido);
 	}
 	

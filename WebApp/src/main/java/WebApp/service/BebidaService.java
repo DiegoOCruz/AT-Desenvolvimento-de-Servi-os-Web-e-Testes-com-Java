@@ -10,7 +10,7 @@ import WebApp.model.domain.Bebida;
 public class BebidaService {
 	private static Map<Integer, Bebida> bebidas = new HashMap<Integer, Bebida>(); 
 	
-	public void incluir(Bebida bebida) {
+	public static void incluir(Bebida bebida) {
 		bebidas.put(bebida.getId(), bebida);
 	}
 	
@@ -22,7 +22,7 @@ public class BebidaService {
 		return bebidas.values();
 	}
 	
-	public Bebida obter(int id){
+	public static Bebida obter(int id){
 		return bebidas.get(id);
 	}
 }
